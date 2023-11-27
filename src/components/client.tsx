@@ -4,11 +4,18 @@ import { useState } from 'react'
 
 import { Textarea } from './textarea'
 
-export const Client = () => {
-  const [state, setState] = useState('')
+import { InvalidWords } from '@/components/invalid-words'
+
+type Props = {
+  validWords: string[]
+}
+
+export const Client = ({ validWords }: Props) => {
+  const [text, setState] = useState('')
   return (
     <div>
-      <Textarea value={state} onChange={setState} />
+      <Textarea value={text} onChange={setState} />
+      <InvalidWords validWords={validWords} text={text} />
     </div>
   )
 }
