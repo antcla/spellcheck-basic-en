@@ -16,9 +16,9 @@ Ogden's Basic, and the concept of a simplified English, gained its greatest publ
 
 Although Basic English was not built into a program, similar simplifications have been devised for various international uses. Richards promoted its use in schools in China.[4] It has influenced the creation of Voice of America's Learning English for news broadcasting, and Simplified Technical English, another English-based controlled language designed to write technical manuals.`)
   return (
-    <div>
+    <>
       <Textarea value={text} onChange={setState} />
       <InvalidWords text={text} />
-    </div>
+    </>
   )
 }

@@ -38,14 +38,18 @@ export const InvalidWords = ({ text }: Props) => {
       word.length > 0 && /[A-z]/.test(word) && !validWords.includes(word),
   )
 
+  if (invalid.length === 0) {
+    return <strong>✅ All good</strong>
+  }
+
   return (
-    <div>
+    <>
       <h2 className="text-xl font-bold">Invalid Words</h2>
       <ul>
         {invalid.map((word) => (
           <InvalidWord key={word} word={word} />
         ))}
       </ul>
-    </div>
+    </>
   )
 }
