@@ -1,36 +1,28 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+> Brief: Make a spell checker for BASIC English
+> 
+> Time allowed: 1 hour (outside of the interview time)
+> 
+> Background: British American Scientific International Commercial (BASIC) English is a constructed language. It has 850 English words, carefully chosen to make the language easy to learn but still powerful enough to communicate everyday ideas and actions. The rules of usage are identical to full English, so the speaker communicates in perfectly good, but simple, English.
+> It is an interesting exercise to try to write out a complicated idea in simple English (e.g. https://xkcd.com/1133), and a spell checker that tells you when you are using BASIC English would be a useful tool.
+> 
+> Objectives: The main objective is to make something that works in the time you have (~1h pre-interview). In the interview, we’ll then discuss your approach, in terms of both UX and implementation, and ask you to extend your prototype in some way. There are no right or wrong answers. Here are some examples of discussion questions:
+> 
+> What should the user experience be like? What are people expecting or used to? How did you scope your solution given the time constraint?
+> 
+> You don’t have to worry too much about efficiency when there are only a few thousand words, but efficiency is more important for real languages. How would you make it faster and / or require less memory?
+> Resources: More about BE:
+> http://ogden.basic-english.org/basiceng.html
+> The list of 850 words:
+> http://ogden.basic-english.org/words.html
+> Combined word list (includes some compound words):
+> https://simple.wikipedia.org/wiki/Wikipedia:Basic_English_combined_wordlist
+> The page on (Simple) Wikipedia:
+> https://simple.wikipedia.org/wiki/Basic_English
 
-## Getting Started
 
-First, run the development server:
+## Notes
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
-
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
-
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
-
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+1. Took the word list from https://github.com/dariusk/corpora/blob/a5cd0b8/data/words/common.json
+2. My solution does not handle conjugations or pluralization, I would fix this next
+3. I pasted a portion of a Wikipedia article into the Textarea default value, so we can immediately see how it works and its shortcomings.
+4. With more time, I would highlight words in the Textarea, probably using https://www.slatejs.org
