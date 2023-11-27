@@ -18,7 +18,7 @@ Although Basic English was not built into a program, similar simplifications hav
   return (
     <>
       <Textarea value={text} onChange={setState} />
-      <InvalidWords text={text} />
+      <InvalidWords text={text} onChange={setState} />
     </>
   )
 }
