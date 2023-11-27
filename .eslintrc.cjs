@@ -77,15 +77,6 @@ const eslintConfig = {
     'unicorn/no-null': 0,
     'unicorn/prevent-abbreviations': 0, // annoying
   },
-  overrides: [
-    {
-      files: ['*.json', '*.json5', '*.jsonc'],
-      parser: 'jsonc-eslint-parser',
-      rules: {
-        'unicorn/numeric-separators-style': 0,
-      },
-    },
-  ],
 
   // parser: "@babel/eslint-parser",
   settings: {
